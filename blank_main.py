@@ -79,7 +79,7 @@ def info_request(name):
 
 
 
-@bot.command(_________=['_______']) 
+@bot.command(_________=['_______']) # <==   >도움말 명령어를 입력했을때 아래 함수가 작동하도록 만들어주세요
 async def info(ctx):
   embed = discord.Embed(
           title="School Bot",
@@ -140,7 +140,7 @@ async def info(ctx):
           )
   return await ctx.send(embed=embed)
 
-@bot.command(_________=['_______']) 
+@bot.command(_________=['_______']) # <==   >학교정보 명령어를 입력했을때 아래 함수가 작동하도록 만들어주세요
 async def info(ctx):
   embed = discord.Embed(
           title="School Bot",
@@ -261,7 +261,7 @@ async def lunch(ctx, name, date):
       return await ctx.send(data)
 
 
-@bot.command(_________=['_______']) #>시간표 
+@bot.command(_________=['_______'])  # <==   >시간표 명령어를 입력했을때 아래 함수가 작동하도록 만들어주세요
 async def timetable(ctx, name, grade, sclass, date):
   try:
     info_request(name)
