@@ -183,7 +183,7 @@ async def lunch(ctx, name, date):
   url += f"&Type=json&KEY={API_KEY}"
 
   try:
-      data = requests(url).json()
+      data = requests.get(url).json()
       meal = data['mealServiceDietInfo'][1]['row'][0]['DDISH_NM'].replace("<br/>", "\n")
       embed = discord.Embed(title=name+"의 급식입니다",colour=discord.Colour.green())
       return_date = f"{now.strftime('%Y')}년 "
@@ -268,7 +268,7 @@ async def calendar(ctx, name, date):
     url += f"ATPT_OFCDC_SC_CODE={SCHUL_INFO[name]['교육청코드']}&"
     url += f"SD_SCHUL_CODE={SCHUL_INFO[name]['학교코드']}&"
     url += f"Type=json&KEY={API_KEY}&AA_YMD={date}"
-    data = requests(url).json()
+    data = requests.get(url).json()
 
     year = int(int(date)/10000)
     month = int(int(date)%10000/100)
