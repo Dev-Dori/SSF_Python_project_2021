@@ -43,7 +43,7 @@ now = datetime.datetime.now()
 def info_request(name):
   print(name+"", SCHUL_INFO.get(name))
   if SCHUL_INFO.get(name) == None:
-      url = f"https://open.neis.go.kr/hub/schoolInfo?SCHUL_NM={name}"
+      url = f"https://open.neis.go.kr/hub/schoolInfo?SCHUL_NM="+name
       url += f"&Type=json&KEY={API_KEY}"
       
       data = requests.get(url).json() # API에서 받아온 데이터를 json형식으로 data에 저장
