@@ -79,7 +79,7 @@ def info_request(name):
 
 
 
-@bot.command(aliases=['도움말']) 
+@bot.command(_________=['_______']) 
 async def info(ctx):
   embed = discord.Embed(
           title="School Bot",
@@ -140,7 +140,7 @@ async def info(ctx):
           )
   return await ctx.send(embed=embed)
 
-@bot.command(aliases=['도움말']) 
+@bot.command(_________=['_______']) 
 async def info(ctx):
   embed = discord.Embed(
           title="School Bot",
@@ -232,7 +232,7 @@ async def school(ctx, name):
 
 
 
-@bot.command(aliases=['급식정보']) #>급식정보
+@bot.command(_________=['_______']) #>급식정보
 async def lunch(ctx, name, date):
   info_request(name)
   #학교/교육청 코드를 url에 추가함 -> 해당 정보가 없다면 url을 호출할 때 오류가 생김
@@ -261,7 +261,7 @@ async def lunch(ctx, name, date):
       return await ctx.send(data)
 
 
-@bot.command(aliases=['시간표']) #>시간표 
+@bot.command(_________=['_______']) #>시간표 
 async def timetable(ctx, name, grade, sclass, date):
   try:
     info_request(name)
