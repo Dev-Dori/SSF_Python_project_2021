@@ -222,7 +222,7 @@ async def timetable(ctx, name, grade, sclass, date):
     url += f"&ALL_TI_YMD={year}{str(month).zfill(2)}{str(day).zfill(2)}" #입력받은 날짜를 url에 추가함 -> 해당 정보가 없다면 url을 호출할 때 오류가 생김
     url += f"&Type=json&KEY={API_KEY}"
 
-    data = requests(url).json()
+    data = requests.get(url).json()
     if SCHUL_INFO[name]['학교종류'] == "고등학교":
       data = data['hisTimetable']
     elif SCHUL_INFO[name]['학교종류'] == "중학교":
