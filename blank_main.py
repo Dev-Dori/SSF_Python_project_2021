@@ -140,66 +140,6 @@ async def info(ctx):
           )
   return await ctx.send(embed=embed)
 
-@bot.command(_________=['_______']) # <==   >학교정보 명령어를 입력했을때 아래 함수가 작동하도록 만들어주세요
-async def info(ctx):
-  embed = discord.Embed(
-          title="School Bot",
-          description="유니폭스와 함께 만드는 학교봇\n ",
-          color=0xb9e2ee
-          )
-
-  embed.add_field(
-          name="1. 학교정보",
-          value='''
-                  ```
-                  >학교정보 <학교명>
-                  
-                  예시)
-                  >학교정보 선린인터넷고
-                  ```
-                '''.replace("  ",""),
-          inline=False
-          )
-
-  embed.add_field(
-          name="2. 오늘의 급식", 
-          value='''
-                  ```
-                  >급식정보 <학교명> <월+일>
-                  
-                  예시)
-                  >급식정보 선린인터넷고 601
-                  ```
-                '''.replace("  ",""),
-          inline=False
-          )
-
-  embed.add_field(
-          name="3. 시간표",
-          value='''
-                  ```
-                  >시간표 <학교명> <학년> <반> <월+일>
-                  
-                  예시)
-                  >시간표 선린인터넷고 2 3 601
-                  ```
-                '''.replace("  ",""), 
-          inline=False
-          )
-
-  embed.add_field(
-          name="4. 학사일정",
-          value='''
-                  ```
-                  >학사일정 <학교명> <년+월+일>
-                  
-                  예시)
-                  >학사일정 선린인터넷고 20210814
-                  ```
-                '''.replace("  ",""), 
-          inline=False
-          )
-  return await ctx.send(embed=embed)
 
 
 @bot.command(_________=['_______']) # <==   >학교정보 라고 명령어를 입력했을때 아래 함수가 작동하도록 만들어주세요
